@@ -29,3 +29,9 @@ Run the below command to get the package details
 ```bash
 spack info cvmfs-spack
 ```
+
+## CVMFS dependencies
+1. fuse
+2. libressl
+3. zlib
+4. libuuid
