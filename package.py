@@ -3,23 +3,6 @@
 #
 # SPDX-License-Identifier: (Apache-2.0 OR MIT)
 
-# ----------------------------------------------------------------------------
-# If you submit this package back to Spack as a pull request,
-# please first remove this boilerplate and all FIXME comments.
-#
-# This is a template package file for Spack.  We've put "FIXME"
-# next to all the things you'll want to change. Once you've handled
-# them, you can save this file and test your package like this:
-#
-#     spack install cvmfs-spack
-#
-# You can edit this file again by typing:
-#
-#     spack edit cvmfs-spack
-#
-# See the Spack documentation for more information on packaging.
-# ----------------------------------------------------------------------------
-
 from spack.package import *
 
 
@@ -30,7 +13,7 @@ class CvmfsSpack(CMakePackage):
     url = "https://ecsft.cern.ch/dist/cvmfs/cvmfs-2.11.2/cvmfs-2.11.2.tar.gz"
 
     # list of GitHub accounts to notify when the package is updated.
-    maintainers("ShivamMadlani")
+    # maintainers("ShivamMadlani")
 
     license("BSD-3-Clause", checked_by="ShivamMadlani")
 
@@ -39,7 +22,6 @@ class CvmfsSpack(CMakePackage):
     depends_on("libressl", type="link")
     depends_on("fuse")
     depends_on("libuuid")
-    depends_on("nspr")
     depends_on("zlib")
 
     def cmake_args(self):
